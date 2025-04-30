@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ZERO SUBSTANCE 22101110 김서연</title>
+
+<link href="https://fonts.cdnfonts.com/css/pf-mellon" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="icon" type="image/png" href="activator.png">
+	<style type="text/css">
+
+	html {
+  font-family: "PF Mellon", sans-serif;
+  line-height: 1.7;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  word-break: keep-all;
+  scroll-behavior: smooth;
+}
+.pretendard {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+h1{font-weight: 700; font-size: 17rem; color: white; }
+h2{font-size: 2.8rem; color: white;}
+h3{font-weight: 700; font-size: 11rem; color: white; padding-right: 100px;}
+
+	body, h1, h2, h3, h4, p, ol, ul, footer{margin: 0; padding: 0;}
+	nav{top: 20px; left: 0; background: transparent; z-index: 1000; font-size: 1.7rem; position: sticky; width: 100%;}
+	body, section{background-color: black;}
+
+		.flex{display: flex; justify-content: center;}
+		.menu{width: fit-content; padding: 0px 70px; margin: auto; gap: 20px; background: white; }
+		li{list-style-type: none; width: 200px; text-align: center;}
+		.menu li a{text-decoration: none; color: black; padding: 20px;}
+		.logo{padding: 10px;}
+		.menu li a:hover{color: #FF24B2; text-decoration: underline; transition: all 0.7s;}
+
+	
+	.wrap{width: 800px; margin: auto;}
+	.wrap2{width: 1400px; margin: auto; position: relative;}
+	.bg-pic{background: url(pinkwater.gif); background-size: cㅐㅜㅅㅁ;background-attachment: fixed;}
+
+.egg{position: relative; height: 800px;
+  background: url('eggyolk.gif') no-repeat center center;
+  background-size: contain; background-position: center; background-color: black;}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* 제목 색상 분리 */
+.pink {
+  color: #FF24B2;}
+.white {color: white;}
+
+.glow {
+  color: #FF24B2;
+  font-weight: 900;
+  text-shadow:
+    0 0 4px #FF24B2,
+    0 0 8px #FF24B2,
+    0 0 12px #FF69B4;
+  animation: neon-flicker 1.7s infinite ease-in-out;
+}
+
+@keyframes neon-flicker {
+  0%, 100% {
+    text-shadow:
+      0 0 4px #FF24B2,
+      0 0 8px #FF24B2,
+      0 0 12px #FF69B4;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #FF24B2,
+      0 0 4px #FF69B4;
+  }
+}
+
+.box {
+  position: relative;
+  background: url('firstbox.png') no-repeat center center;
+  background-size: cover;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+padding-top: 400px;  margin-top: 100px; margin-bottom: 200px}
+
+.overlay-text-box {
+  background-color: white;
+  padding: 80px 67px;
+  margin: -250px auto 0 auto;
+  display: inline-block; box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);   animation: dropIn 4s ease-in-out infinite;
+}
+
+/* 아래로 떨어지는 애니메이션 */
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay-text {
+  font-size: 5.8rem;
+  font-weight: 700;
+  color: black;
+  margin: 0; line-height: 1;
+}
+
+.bottom-caption {font-weight: 600; font-size: 2.9rem; color: white;
+ padding-top: 242px;}
+
+
+/* 버거 */
+
+.burger-scene {
+  background-color: black;
+  padding: 150px 0;  margin-bottom: 300px;
+}
+
+.burger-relative {
+  position: relative;
+}
+
+.burger-img {
+  position: absolute;
+  top: 100px;
+  left: -60px;
+  width: 700px;
+  z-index: 1;  transition: opacity 0.5s ease;}
+
+ .burger-img-box {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 기본 이미지 */
+.burger-img.normal {
+  z-index: 1;
+  opacity: 1;
+}
+/* hover 시 나타나는 이미지 */
+.burger-img.hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none; /* 클릭 방해 없게 */
+  transition: opacity 0.5s ease;
+}
+/* 마우스 올렸을 때: hover 이미지 보이기, normal 숨기기 */
+.burger-img-box:hover .hover {
+  opacity: 1;
+}
+.burger-img-box:hover .normal {
+  opacity: 0;
+}
+
+.burger-scene h3 {
+  width: fit-content;
+  margin-left: auto;
+  padding-right: 36px; /* ← 원하는 만큼 오른쪽으로 이동 */
+}
+
+
+/* 크레페 */
+
+.crepe-scene {
+  background-color: black;
+  padding: 150px 0;
+}
+
+.crepe-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.crepe-text {
+  font-size: 11rem;
+  font-weight: 800;
+  color: white;
+  padding-left: 20px;
+  white-space: nowrap; z-index: 2;
+}
+
+.crepe-img-box {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+/* 기본 이미지 */
+.crepe-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease;
+}
+/* hover 이미지 (화면 전체 덮기) */
+.crepe-img.hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* hover 시 이미지 전환 */
+.crepe-img-box:hover .hover {
+  opacity: 1;
+}
+.crepe-img-box:hover .normal {
+  opacity: 0;
+}
+
+
+/* 맥주 */
+
+.beer-scene {
+  background-color: black;
+  padding: 50px 0;  margin-bottom: 600px;
+}
+
+.beer-relative {
+  position: relative;
+}
+
+.beer-img {
+  position: absolute;
+  top: 130px;
+  left: -49px;
+  width: 780px;
+  z-index: 1;  transition: opacity 0.5s ease;}
+
+ .beer-img-box {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 기본 이미지 */
+.beer-img.normal {
+  z-index: 1;
+  opacity: 1;
+}
+/* hover 시 나타나는 이미지 */
+.beer-img.hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none; /* 클릭 방해 없게 */
+  transition: opacity 0.5s ease;
+}
+/* 마우스 올렸을 때: hover 이미지 보이기, normal 숨기기 */
+.beer-img-box:hover .hover {
+  opacity: 1;
+}
+.beer-img-box:hover .normal {
+  opacity: 0;
+}
+
+.beer-scene h3 {
+  width: fit-content;
+  margin-left: auto;
+  padding-right: 200px; /* ← 원하는 만큼 오른쪽으로 이동 */
+}
+
+@keyframes blinkBox {
+  0%, 100% {
+    background-color: #B8F942;
+  }
+  50% {
+    background-color: black; /* 살짝 밝게 또는 어둡게 변경 가능 */
+  }
+}
+
+/* 형광 박스 스타일 */
+.highlight-scene {
+  background-color: black;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.highlight-box {
+  background-color: #B8F942;
+  font-weight: 800;
+  font-size: 3rem;
+  padding: 30px 60px;
+  margin-bottom: 7px;
+  width: 1000px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  border: 4px solid black;
+  font-family: 'Pretendard Variable', sans-serif;
+
+  animation: blinkBox 5s ease-in-out infinite;
+}
+
+.highlight-box .right {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* 딱 내용물만 지웁니다 */
+
+.bg-1 {
+  background: url('erase.png') no-repeat center center;
+  background-size: cover;
+  padding: 200px 0; /* 위아래 여백으로 위치 조정 */
+  color: white; margin-bottom: 100px;
+}
+
+
+
+.bg-1 .wrap2 {
+  padding-top: 57px; /* 필요에 따라 위치 조절 */
+}
+
+.small-text {
+  font-size: 2.2rem;
+  font-weight: 400;
+ padding-bottom: 15px;
+  text-align: left;
+  padding-left: 600px
+}
+
+.small-text2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding-top: 200px;
+ padding-bottom: 200px;
+  text-align: center;
+  color: white;
+}
+
+.big-text {
+  font-size: 7.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  padding-left: 600px;
+}
+
+
+.bg-pic2{background: url(light.gif); background-size: 500px;background-attachment: fixed; margin-bottom: 100px}
+
+.bg-1 {
+  background: url('erase.png') no-repeat center center;
+  background-size: cover;
+  padding: 200px 0; /* 위아래 여백으로 위치 조정 */
+  color: white; margin-bottom: 100px;
+}
+
+
+/* 푸터 위 */
+.pink-section {
+  background: url('up-footer.png') no-repeat center center;
+  background-size: 100% auto;
+  padding: 500px 0;
+  position: relative; margin-bottom: 390px;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 566px;
+  left: 0;
+  width: 100%;
+}
+
+.white-box {
+  background: white;
+  padding: 234px 352px; /* 기존 패딩 유지 */
+  transform: rotate(-10deg);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 40%;
+  top: 91px;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.white-text-container {
+  position: absolute;
+  top: 50px;    /* 텍스트 상자 내에서 수직 위치 */
+  left: 40px;   /* 텍스트 상자 내에서 수평 위치 */
+}
+
+.white-text {
+  font-size: 4.9rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: black;
+  margin: 0;
+}
+
+
+.bottle-img {
+  width: 300px;
+  position: absolute;
+  left: 77%;
+  top: 307px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* 푸터 */
+
+.footer {
+  background: black;
+  padding: 0px;
+  color: white;
+  font-family: 'PF Mellon', sans-serif;
+  border-top: 3px solid #FF24B2;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+.footer-logo {
+  width: 488px;
+}
+
+.footer-texts {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-slogan {
+  font-size: 7.3rem;
+  font-weight: 700;
+  margin-bottom: -13px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 100px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.data {
+  color: #888;
+}
+
+.footer-copy {
+  font-size: 1.6rem;
+  color: #666;
+}
+
+.bottle-img:hover {
+  transform: translateX(-50%) rotate(15deg);
+  transition: transform 0.3s ease;
+}
+
+  </style>
+</head>
+
+
+
+<body>
+
+	<header class="egg">
+		<div class="wrap2 text-overlay">
+
+	 <h1><span class="pink glow">ZERO</span> <span class="white">SUBSTANCE</span></h1>
+
+	</div>
+	</header>
+
+<nav>
+    <div class="wrap flex">
+      <ul class="menu flex">
+      <li class="m1"><a href="#">ZERO SUBSTANCE</a></li>
+      <li class="m1"><a href="process.html">PROCESS</a></li>
+  </nav>
+
+<section class="box">
+	  <div class="wrap2">
+  <div class="overlay-text-box">
+    <p class="overlay-text">Eat EVERYTHING,<br>Gain NOTHING</p>
+  </div>
+  <h2 class="bottom-caption pretendard">새벽 2시 45분, 당신이 원하는 것은 무엇입니까?</h2>
+</section>
+
+<section class="burger-scene">
+  <div class="wrap2 burger-relative">
+  	<div class="burger-img-box">
+     <img src="hamburger.png" class="burger-img normal">
+      <img src="hover-burger.png" class="burger-img hover">
+  </div>
+    <h3>A Cheeeessse burger?</h3>
+  </div>
+</section>
+
+
+<section class="crepe-scene">
+  <div class="wrap2 crepe-flex">
+    <h3 class="crepe-text">Nutella crepe?</h3>
+    <div class="crepe-img-box">
+      <img src="crepe.png" class="crepe-img normal">
+      <img src="hover-crepe.png" class="crepe-img hover">
+    </div>
+  </div>
+</section>
+
+<section class="beer-scene">
+  <div class="wrap2 beer-relative">
+  	<div class="beer-img-box">
+     <img src="beer.png" class="beer-img normal">
+      <img src="hover-beer.png" class="beer-img hover">
+  </div>
+    <h3>Fresh beer?</h3>
+  </div>
+</section>
+
+<section class="highlight-scene">
+      <div class="highlight-box"><span>당신은 음식의</span></div>
+      <div class="highlight-box"><span class="right"><em>먹음직스러운 형태와</em></span></div>
+      <div class="highlight-box"><span class="right"><em>혀 끝의 감각을</em></span></div>
+     <div class="highlight-box"><span>원합니다.</span></div>
+
+</section>
+
+<section class="bg-1">
+  <div class="wrap2">
+    <p class="small-text pretendard">우리는 거기에서 딱</p>
+    <h2 class="big-text pretendard">‘칼로리’만<br>지웁니다.</h2>
+  </div>
+</section>
+
+<section class="bg-pic2">
+  <div class="wrap2 small-text2 pretendard">
+    <p>당신의 식욕을 만족시키되,</p>
+    <p><span style="color: #B8F942;"><strong>살찌는 그 어떤 것도</strong></span> 남기지 않습니다.</p>
+  </div>
+</section>
+
+<section class="pink-section">
+  <div class="wrap2">
+  
+ </div>
+
+  <!-- 흰색 박스와 텍스트, 병 이미지는 절대 위치로 배치 -->
+  <div class="floating-elements">
+    <div class="white-box">
+     <div class="white-text-container">
+  <p class="white-text pretendard"><strong>살 안 찌는<br>‘배부른 식사’를<br>경험하세요.</strong></p>
+</div>
+    </div>
+    <a href="process.html">
+    <img src="activator.png" alt="process bottle" class="bottle-img"></a>
+  </div>
+</section>
+
+  
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <img src="footer.png" alt="ZERO SUBSTANCE" class="footer-logo">
+
+    <div class="footer-texts">
+      <h2 class="footer-slogan">Eat <strong>EVERYTHING</strong>, Gain <strong>NOTHING</strong></h2>
+      <div class="footer-info">
+        <div>
+          <p class="label">Contact</p>
+          <p class="data">00-888-0000</p>
+        </div>
+        <div>
+          <p class="label">E-Mail</p>
+          <p class="data">kellykinoma@gmail.com</p>
+        </div>
+        <div>
+          <p class="label"><br></p>
+          <p class="data">©2025 ZERO SUBSTANCE ALL RIGHTS RESERVED</p>
+        </div>
+         
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

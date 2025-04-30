@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>process</title>
+
+	<link href="https://fonts.cdnfonts.com/css/pf-mellon" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="icon" type="image/png" href="activator.png">
+
+	<style type="text/css">
+
+	html {
+  font-family: "PF Mellon", sans-serif;
+  line-height: 1.7;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  word-break: keep-all;
+  scroll-behavior: smooth;
+}
+.pretendard {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+h1{font-weight: 700; font-size: 17rem; color: white; }
+h2{font-size: 2.8rem; color: white;}
+h3{font-weight: 700; font-size: 11rem; color: white; padding-right: 100px;}
+
+	body, h1, h2, h3, h4, p, ol, ul, footer, delivery-section{margin: 0; padding: 0;}
+	nav{top: 20px; left: 0; background: transparent; z-index: 1000; font-size: 1.7rem; position: fixed; width: 100%;}
+	body, section{background-color: black;}
+
+		.flex{display: flex; justify-content: center;}
+		.menu{width: fit-content; padding: 0px 70px; margin: auto; gap: 20px; background: white; }
+		li{list-style-type: none; width: 200px; text-align: center;}
+		.menu li a{text-decoration: none; color: black; padding: 20px;}
+		.logo{padding: 10px;}
+		.menu li a:hover{color: #FF24B2; text-decoration: underline; transition: all 0.7s;}
+
+	
+	.wrap{width: 800px; margin: auto;}
+	.wrap2{width: 1400px; margin: auto; position: relative;}
+	.wrap3{width: 1000px; margin: auto; position: relative;}
+
+/* 첫번째 배경*/
+.process {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.process-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how-to-use {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: black;
+}
+
+.howto-img {
+  height: 630px;
+}
+
+.howto-text {
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FF24B2;
+  font-size: 21rem;
+  font-weight: 700;
+  font-family: 'PF Mellon', sans-serif;
+  white-space: nowrap;
+}
+
+.bottom {font-weight: 600; font-size: 2.9rem; color: white;
+ padding-top: 242px; text-align: center}
+
+.activator-section {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.activator-content {
+  position: relative;
+  text-align: center;
+}
+
+.box-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.bottle-img {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+.activator-text {
+  color: white;
+  font-size: 2rem;
+  margin-top: 40px;
+  line-height: 1.6;
+  font-family: 'Pretendard Variable', sans-serif;
+}
+
+
+.gif-section {
+  padding-top: 257px; /* 윗 섹션과의 간격 */
+  text-align: center;
+  background-color: black;
+}
+
+.activator-gif {
+  max-width: 31%;
+  height: auto;
+}
+
+.bottom-text {
+  margin-top: 0px;
+  font-size: 2.9rem;
+  color: white;
+  line-height: 1.4;
+  font-weight: 600;
+  padding-bottom: 290px;
+  font-family: 'Pretendard Variable', sans-serif;
+}
+
+
+.step-label {
+  position: absolute;
+  top: -55px;
+  left: 170px;
+  background-color: white;
+  padding: 40px 63px; /* 기존보다 padding만 살짝 줄이기 */
+  font-size: 4rem;    /* 글씨 키우기 */
+  font-weight: 700;
+  line-height: 1.1;
+  transform: rotate(-15deg);
+  font-family: 'PF Mellon', sans-serif;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.step-label2 {
+  position: absolute;
+  top: -55px;
+  right: 195px;
+  background-color: white;
+  padding: 40px 82px; /* 기존보다 padding만 살짝 줄이기 */
+  font-size: 4rem;    /* 글씨 키우기 */
+  font-weight: 700;
+  line-height: 1.1;
+  transform: rotate(15deg);
+  box-shadow: 0 5px 45px rgba(0,0,0,0.2);
+}
+
+.step-label3 {
+  position: absolute;
+  top: -250px;
+  left: 174px;
+  background-color: white;
+  padding: 80px 82px; /* 기존보다 padding만 살짝 줄이기 */
+  font-size: 9rem;    /* 글씨 키우기 */
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 0px 22px #FF24B2;
+}
+
+.step-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 0px;
+  flex-wrap: wrap;
+}
+
+.step-content2 {
+  max-width: 600px;
+  text-align: right;
+  padding-right: 100px;
+}
+
+.step-text {
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 50%;
+   /* 여기에 아래 속성 추가로 조정 가능 */
+  padding-left: 20px;   /* 왼쪽으로 더 띄우기 */
+  padding-top: 163px;    /* 위에서 더 아래로 내리기 */
+  text-align: left;     /* 텍스트 정렬 방식 (중앙 → 왼쪽) */
+}
+
+.step-text2 {
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+   /* 여기에 아래 속성 추가로 조정 가능 */
+  padding-right: 80px;   /* 왼쪽으로 더 띄우기 */
+  padding-top: 160px;    /* 위에서 더 아래로 내리기 */
+  text-align: right;     /* 텍스트 정렬 방식 (중앙 → 왼쪽) */
+}
+
+.step-section {
+  position: relative;
+  background-color: #FF24B2;
+  padding: 87px 0;
+}
+
+.step-section2 {
+  position: relative;
+  background: url('pinkwater.gif') no-repeat center center;
+  background-size: cover;
+padding: 83px 0;
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: center;
+  margin-top: 220px;
+  margin-bottom: 440px;
+}
+
+.step-gif {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 436px;
+  height: auto;
+}
+
+.delivery-section {
+  background-color: black;
+  color: white;
+  text-align: left;
+  padding: 150px 0px;
+  font-family: 'Pretendard Variable', sans-serif;
+}
+
+.dingdong {
+  font-size: 9rem;
+  font-weight: 700;
+  line-height: 1;
+  
+}
+
+.ding, .dong {
+  display: inline-block;
+  opacity: 0;
+  /* 공통 animation은 삭제하고 아래에서 각각 지정 */
+}
+
+.ding {
+  animation-name: fadeInText, shake;
+  animation-duration: 0.8s, 0.3s;
+  animation-delay: 0s, 0s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, none;
+  animation-direction: normal, alternate;
+  animation-timing-function: ease, ease-in-out;
+}
+
+.dong {
+  animation-name: fadeInText, shake;
+  animation-duration: 0.8s, 0.3s;
+  animation-delay: 1s, 1.4s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, none;
+  animation-direction: normal, alternate;
+  animation-timing-function: ease, ease-in-out;
+}
+
+.arrival-text {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: white;
+  opacity: 1; /* 항상 보이게 */
+  transform: none; /* 위치 이동 없음 */
+  transition: none; /* 부드러운 효과 제거 */
+  padding-top: 46px;
+}
+
+.dingdong-box {
+  padding-left: 20px;    /* .step-text와 좌측 정렬 맞춤 */
+  text-align: left;      /* 텍스트 왼쪽 정렬 */
+}
+
+/* 진동 효과 */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(2px); }
+}
+
+/* 텍스트 순차 등장 */
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+.delivery-img {
+  width: 100%;
+  padding-top: 0px;
+}
+
+.dingdong, .arrival-text {
+  padding-left: 104px;
+}
+
+/* 라스트 달걀 */
+.hero-visual {
+  position: relative;
+  text-align: center;
+  padding: 44px 0;
+}
+
+.hero-img {
+  width: 71%; /* 또는 원하는 값 */
+  height: auto;
+}
+
+
+.pink {
+  color: #FF24B2;
+}
+.white {
+  color: white;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/* 푸터 */
+
+.footer {
+  background: black;
+  padding: 0px;
+  color: white;
+  font-family: 'PF Mellon', sans-serif;
+  border-top: 3px solid #FF24B2;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+.footer-logo {
+  width: 488px;
+}
+
+.footer-texts {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-slogan {
+  font-size: 7.3rem;
+  font-weight: 700;
+  margin-bottom: -13px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 100px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.data {
+  color: #888;
+}
+
+.footer-copy {
+  font-size: 1.6rem;
+  color: #666;
+}
+
+/* 주의, 부작용 파트 */
+
+.caution-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.caution-caption {
+  background: white;
+  color: black;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  padding: 25px 40px;
+  text-align: center;
+  font-family: 'Pretendard Variable', sans-serif;
+  margin-bottom: 350px;
+}
+
+.caution-bg {
+  background: url('caution.png') no-repeat center center;
+  background-size: cover;
+  height: 135vh;
+  width: 100%;
+  margin-top: 350px;
+}
+
+
+.marquee {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  background-color: #B8F942;
+  overflow: hidden;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  z-index: 2; /* 배경 위로 */
+}
+
+.marquee-inner {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-left 80s linear infinite;
+}
+
+.marquee-inner span {
+  display: inline-block;
+  font-size: 8rem;
+  font-weight: 900;
+  color: black;
+  padding-right: 30px; /* 글자 사이 간격 */
+}
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+</style>
+</head>
+
+
+<body>
+
+	<header class="process">
+  <img src="Process.png" class="process-img" alt="process image">
+ 
+  </div>
+</header>
+
+<nav>
+    <div class="wrap flex">
+      <ul class="menu flex">
+      <li class="m1"><a href="index.html">ZERO SUBSTANCE</a></li>
+      <li class="m1"><a href="#">PROCESS</a></li>
+  </ul>
+</div>
+  </nav>
+
+<section class="how-to-use">
+  <img src="withactivator.gif" class="howto-img" alt="How to Use">
+  <h2 class="howto-text">HOW TO USE</h2>
+</section>
+
+<section class="gif-section">
+  <img src="man.png" alt="Activator GIF" class="activator-gif">
+  <p class="bottom-text">
+    ZERO SUBSTANCE는 활성제를 통해<br>
+    효과가 발현됩니다.
+  </p>
+</section>
+
+<section class="step-section">
+  <div class="step-label">STEP 1.<br>Just one drop</div>
+
+  <div class="step-content">
+    <div class="step-text pretendard">
+      0칼로리로 만들고 싶은 음식 위에<br>
+      ACTIVATOR를 한 방울을 주입합니다.
+    </div>
+    <img src="drop.gif" alt="Step 1 GIF" class="step-gif">
+  </div>
+</section>
+
+
+<section class="step-section2">
+  <div class="step-label2">STEP 2.<br>Wait 10sec</div>
+
+  <div class="step-content2">
+    <div class="step-text2 pretendard">
+      약 10초 후, 음식은 ‘섭취 가능한 외형’만<br>유지된 채, 칼로리는 제거 당합니다.
+    </div>
+  </div>
+</section>
+
+<section class="step-section">
+  <div class="step-label3">STEP 3.<br>Change to 0kcal</div>
+
+  <div class="step-content">
+    <div class="step-text pretendard">
+      칼로리는 0, 맛과 냄새는 그대로.<br>식감은 ‘기억된 것’과 유사하게 남습니다.
+    </div>
+    <img src="hamburger.gif" alt="Step 1 GIF" class="step-gif">
+  </div>
+</section>
+
+<section class="caution-section">
+  <div class="caution-bg"></div>
+
+  <div class="marquee">
+  <div class="marquee-inner">
+    <span>CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION CAUTION</span>
+    
+   
+  </div>
+</div>
+
+  <div class="caution-caption wrap">
+    본 서비스는 몸의 현실 인식을 잠시 유예시키는 것이므로 지나친 사용은 위장을 다시 기억하게 만듭니다.
+  </div>
+</section>
+
+<section class="delivery-section">
+  <div class="dingdong-box wrap2">
+    <h2 class="dingdong pretendard"><span class="ding">띵</span><br><span class="dong">동</span></h2>
+    <p class="arrival-text pretendard">택배가 도착했습니다.</p>
+  </div>
+  <img src="invite.png" alt="배송 이미지" class="delivery-img">
+</section>
+
+<section class="hero-visual">
+  <a href="index.html"><img src="finalegg.png" class="hero-img"></a>
+ 	<div class="wrap2 text-overlay">
+	 <h1><span class="pink glow">ZERO</span> <span class="white">SUBSTANCE</span></h1>
+
+	</div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <img src="footer.png" alt="ZERO SUBSTANCE" class="footer-logo">
+
+    <div class="footer-texts">
+      <h2 class="footer-slogan">Eat <strong>EVERYTHING</strong>, Gain <strong>NOTHING</strong></h2>
+      <div class="footer-info">
+        <div>
+          <p class="label">Contact</p>
+          <p class="data">00-888-0000</p>
+        </div>
+        <div>
+          <p class="label">E-Mail</p>
+          <p class="data">kellykinoma@gmail.com</p>
+        </div>
+        <div>
+          <p class="label"><br></p>
+          <p class="data">©2025 ZERO SUBSTANCE ALL RIGHTS RESERVED</p>
+        </div>
+         
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
